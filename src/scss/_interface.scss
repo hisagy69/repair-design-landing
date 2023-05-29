@@ -1,0 +1,55 @@
+.logo {
+    font-size: 14px;
+    color: $primary;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+        color: $white;
+        transition: 0.3s color;
+        &:hover {
+            color: $primary;
+        }
+        &:not(&:last-child) {
+            margin-right: 40px;
+        }
+    }
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.contacts {
+    display: flex;
+    align-items: center;
+    &__phone {
+        margin-right: 45px;
+    }
+    &__button {
+        padding: 13px 20px;
+    }
+}
+.phone {
+    font-size: 14px;
+    color: $primary;
+}
+.button {
+    font-size: 13px;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    &_primary {
+        background-color: $primary;
+        box-shadow: 0px 5px 15px rgba($primary, 0.2);
+    }
+}
