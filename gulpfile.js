@@ -10,7 +10,6 @@ const webp = require('gulp-webp');
 
 const html = () => {
     return src('src/index.html')
-        .pipe(concat('index.min.html'))
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(dest('dist'));
 };
@@ -39,8 +38,8 @@ const img = () => {
 };
 
 const watching = () => {
-    watch(['src/scss/styles.scss'], styles).on('change', browserSync.reload);
-    watch(['src/js/main.js'], scripts).on('change', browserSync.reload);
+    watch(['src/scss/**/*.scss'], styles).on('change', browserSync.reload);
+    watch(['src/js/*.js'], scripts).on('change', browserSync.reload);
     watch(['src/*.html']).on('change', browserSync.reload);
 };
 

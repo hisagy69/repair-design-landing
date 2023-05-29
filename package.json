@@ -19,5 +19,8 @@
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "reset-css": "^5.0.1"
   }
 }
