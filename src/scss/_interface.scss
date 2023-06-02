@@ -1,6 +1,7 @@
 .logo {
     font-size: 14px;
     color: $primary;
+    font-family: "FuturaDemi";
 }
 .nav {
     display: flex;
@@ -9,7 +10,7 @@
         text-decoration: none;
         text-transform: uppercase;
         font-size: 14px;
-        font-weight: 400;
+        font-family: "FuturaBook";
         color: $white;
         transition: 0.3s color;
         &:hover {
@@ -38,13 +39,17 @@
 }
 .phone {
     font-size: 14px;
+    font-family: "FuturaDemi";
     color: $primary;
+    &:hover {
+        text-decoration: none;
+    }
 }
 .button {
     font-size: 13px;
     color: $white;
     text-transform: uppercase;
-    font-weight: 500;
+    font-family: "FuturaDemi";
     border-radius: 2px;
     border: none;
     cursor: pointer;
@@ -52,6 +57,10 @@
         background-color: $primary;
         box-shadow: 0px 5px 15px rgba($primary, 0.2);
         border: 1px solid $primary;
+        transition: all 0.3s;
+        &:hover {
+            box-shadow: none;
+        }
     }
     &_transparent {
         border: 1px solid $white;

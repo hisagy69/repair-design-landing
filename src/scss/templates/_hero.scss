@@ -1,6 +1,6 @@
 .hero {
     &__wrapper {
-        background: url(../../img/hero.jpg) no-repeat right/cover;
+        background: $dark url(../../img/hero.jpg) no-repeat right/cover;
         position: relative;
         margin-right: -100px;
         &::before {
@@ -21,11 +21,11 @@
     }
     &__title {
         margin-bottom: 19px;
-        max-width: 420px;
+        max-width: 450px;
     }
     &__text {
         max-width: 504px;
-        font-weight: 400;
+        font-family: "FuturaBook";
         font-size: 22px;
         color: $white;
         margin-bottom: 41px;
@@ -64,6 +64,7 @@
     }
     &__link {
         font-size: 14px;
+        font-family: "FuturaDemi";
         text-decoration: none;
         color: $primary;
         transform: rotate(90deg);
@@ -71,7 +72,7 @@
     }
 }
 .title {
-    font-weight: 400;
+    font-family: "YesevaOne", serif;
     font-size: 40px;
     text-transform: uppercase;
     color: $white;
@@ -82,9 +83,9 @@
 .scroll-down {
     font-size: 12px;
     color: $white;
-    font-weight: 400;
+    font-family: "YesevaOne", serif;
     text-transform: uppercase;
-    padding: 40px 90px 48px;
+    padding: 34px 90px;
     background-color: $dark;
     text-decoration: none;
     transition: color 0.3s;
