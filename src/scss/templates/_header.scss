@@ -1,4 +1,9 @@
 .header {
     background-color: $dark;
     padding: 24px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
