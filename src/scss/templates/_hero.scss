@@ -45,7 +45,7 @@
         z-index: 2;
         left: 0;
         bottom: 0;
-        transform: translate(-87px, 50%);
+        transform: translateY(50%);
     }
 }
 .instagram {
@@ -91,7 +91,7 @@
     transition: color 0.3s;
     display: flex;
     align-items: center;
-    padding: 34px 90px;
+    padding: 34px 90px 34px 48px;
     &::after {
         content: url(../../img/button-down.svg);
         margin-left: 12px;

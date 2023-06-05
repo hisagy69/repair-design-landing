@@ -41,8 +41,19 @@
     font-size: 14px;
     font-family: "FuturaDemi";
     color: $primary;
+    text-decoration: none;
+    &::after {
+        content: "";
+        display: block;
+        background-color: $primary;
+        width: 0;
+        height: 1px;
+        transition: width 0.3s;
+    }
     &:hover {
-        text-decoration: none;
+        &::after {
+            width: 100%;
+        }
     }
 }
 .button {
