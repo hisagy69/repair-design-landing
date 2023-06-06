@@ -14,22 +14,23 @@
         top: 0;
     }
     &__content {
-        max-width: 500px;
+        max-width: 35.714rem;
         position: relative;
+        margin-left: 3.928rem;
     }
     &__title {
-        margin-bottom: 19px;
+        margin-bottom: 1.357rem;
     }
     &__text {
         font-family: "FuturaBook";
-        font-size: 22px;
+        font-size: 1.571rem;
         color: $white;
-        margin-bottom: 41px;
+        margin-bottom: 2.928rem;
     }
     &__button {
-        padding: 16px 24px;
+        padding: 1.143rem 1.714rem;
         &:first-child {
-            margin-right: 20px;
+            margin-right: 1.428rem;
         }
     }
     &__instagram {
@@ -55,7 +56,7 @@
         display: flex;
         align-items: center;
         line-height: 0.8;
-        font-size: 14px;
+        font-size: 1rem;
         font-family: "FuturaDemi";
         text-decoration: none;
         color: $primary;
@@ -71,7 +72,7 @@
 }
 .title {
     font-family: "YesevaOne", serif;
-    font-size: 40px;
+    font-size: 2.857rem;
     text-transform: uppercase;
     color: $white;
     &__text_primary {
@@ -79,7 +80,7 @@
     }
 }
 .scroll-down {
-    font-size: 12px;
+    font-size: 0.857rem;
     color: $white;
     font-family: "YesevaOne", serif;
     text-transform: uppercase;
@@ -88,12 +89,45 @@
     transition: color 0.3s;
     display: flex;
     align-items: center;
-    padding: 34px 90px 34px 48px;
+    padding: 2.428rem 6.428rem 2.428rem 3.428rem;
     &::after {
         content: url(../../img/button-down.svg);
-        margin-left: 12px;
+        margin-left: 0.857rem;
     }
     &:hover {
         color: $primary;
+    }
+}
+@media screen and (max-width: 992px) {
+    .hero {
+        &__instagram {
+            display: none;
+        }
+        &__scroll-down {
+            display: none;
+        }
+        &__content {
+            margin-left: 0;
+        }
+    }
+}
+@media screen and (max-width: 570px) {
+    .hero {
+        &__title {
+            margin-bottom: 1.142rem;
+        }
+        &__text {
+            font-size: 1.285rem;
+            margin-bottom: 2.285rem;
+        }
+        &__button {
+            &:first-child {
+                margin-right: 0;
+                margin-bottom: 1.857rem;
+            }
+        }
+    }
+    .title {
+        font-size: 1.642rem;
     }
 }

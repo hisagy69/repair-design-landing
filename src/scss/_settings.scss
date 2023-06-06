@@ -1,7 +1,12 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
-body {
+html {
     font-size: 14px;
     font-family: "FuturaBook", sans-serif;
+}
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 12px;
+    }
 }

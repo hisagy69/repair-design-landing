@@ -1,5 +1,5 @@
 .logo {
-    font-size: 14px;
+    font-size: 1rem;
     color: $primary;
     font-family: "FuturaDemi";
 }
@@ -9,15 +9,15 @@
     &__link {
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 14px;
+        font-size: 1rem;
         font-family: "FuturaBook";
         color: $white;
         transition: 0.3s color;
         &:hover {
             color: $primary;
         }
-        &:not(&:last-child) {
-            margin-right: 40px;
+        &:not(:last-child) {
+            margin-right: 2.857rem;
         }
     }
 }
@@ -31,14 +31,14 @@
     display: flex;
     align-items: center;
     &__phone {
-        margin-right: 45px;
+        margin-right: 3.214rem;
     }
     &__button {
-        padding: 13px 20px;
+        padding: 0.928rem 1.428rem;
     }
 }
 .phone {
-    font-size: 14px;
+    font-size: 1rem;
     font-family: "FuturaDemi";
     color: $primary;
     text-decoration: none;
@@ -46,18 +46,18 @@
         content: "";
         display: block;
         background-color: $primary;
-        width: 0;
+        width: 100%;
         height: 1px;
         transition: width 0.3s;
     }
     &:hover {
         &::after {
-            width: 100%;
+            width: 0;
         }
     }
 }
 .button {
-    font-size: 13px;
+    font-size: 0.928rem;
     color: $white;
     text-transform: uppercase;
     font-family: "FuturaDemi";
@@ -83,5 +83,36 @@
             box-shadow: 0px 5px 15px rgba($primary, 0.2);
             border-color: $primary;
         }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .nav {
+        &__link {
+            margin-right: 1rem;
+        }
+    }
+    .contacts {
+        &__button {
+            display: none;
+        }
+        &__phone {
+            margin-right: 0;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .nav {
+        display: none;
+    }
+    .phone {
+        color: $white;
+        &::after {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 570px) {
+    .button {
+        width: 100%;
     }
 }
