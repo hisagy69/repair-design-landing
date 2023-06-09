@@ -1,0 +1,21 @@
+.design-project {
+    padding-top: 11rem;
+    &__title {
+        margin-bottom: 2.214rem;
+    }
+    &__description {
+        max-width: 52.928rem;
+        margin-bottom: 2.785rem;
+    }
+}
+@media screen and (max-width: 760px) {
+    .design-project {
+        background-color: $dark-gray;
+        &__heading, &__description {
+            color: $white;
+        }
+        &__card {
+            margin-bottom: 5.714rem;
+        }
+    }
+}

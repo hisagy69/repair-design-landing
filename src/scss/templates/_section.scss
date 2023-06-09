@@ -22,4 +22,11 @@
             }
         }
     }
+    &__description {
+        font-family: "FuturaBook";
+        font-size: 1.428rem;
+        color: $gray;
+        text-align: center;
+        line-height: 1.358;
+    }
 }
