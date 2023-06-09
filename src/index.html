@@ -302,6 +302,35 @@
         <!-- /.container -->
     </footer>
     <!-- /.footer -->
+    <div class="modal">
+        <div class="modal__dialog">
+            <a href="#" class="modal__close"></a>
+            <p class="modal__text">
+                Оставьте заявку и наш менеджер свяжется с вами 
+            </p>
+            <form class="modal__form">
+                <div class="modal__input-group">
+                    <label for="name" class="modal__label">Имя</label>
+                    <input id="name" type="text" class="modal__input" placeholder="Как вас зовут:">
+                </div>
+                <div class="modal__input-group">
+                    <label for="phone" class="modal__label">Телефон</label>
+                    <input id="phone" type="text" class="modal__input" placeholder="Ваш номер телефона:">
+                </div>
+                <div class="modal__input-group">
+                    <label for="email" class="modal__label">Email</label>
+                    <input id="email" type="text" class="modal__input" placeholder="Ваш email">
+                </div>
+                <div class="modal__checkbox">
+                    <input id="agree" type="checkbox" class="modal__input-checkbox">
+                    <label for="agree" class="modal__label-checkbox">Я соглашаюсь с обработкой данных</label>
+                </div>
+                <button class="buttom modal__button button_primary">Отправить заявку</button>
+            </form>
+            <!-- /.modal__form -->
+        </div>
+    </div>
+    <!-- /.modal -->
     <script src="js/main.min.jss"></script>
 </body>
 </html>
