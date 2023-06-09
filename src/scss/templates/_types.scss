@@ -1,0 +1,64 @@
+.repair-types {
+    padding-bottom: 14.785rem;
+    &__title {
+        margin-bottom: 2.214rem;
+    }
+}
+.card {
+    &__image {
+        overflow: hidden;
+    }
+    &__text {
+        max-width: 23.571rem;
+        background-color: $white;
+        box-shadow: 10px 10px 20px rgba($dark, 0.03);
+        padding: 1.785rem 2.14rem 3.5rem;
+        position: relative;
+        margin: 0 auto;
+        margin-top: -8rem;
+    }
+    &__title {
+        font-family: "YesevaOne";
+        color: $gray;
+        font-size: 1.285rem;
+        margin-bottom: 0.928rem;
+    }
+    &__list {
+        margin: 0;
+        padding: 0 0 0 1rem;
+    }
+    &__item {
+        font-family: "FuturaBook";
+        color: $light-gray;
+        font-size: 1.071rem;
+        list-style-type: disc;
+        line-height: 1.698;
+    }
+    &__price {
+        width: 16.285rem;
+        background-color: $primary;
+        font-family: "YesevaOne";
+        color: $white;
+        text-transform: uppercase;
+        font-size: 1.285rem;
+        text-align: center;
+        padding: 1.214rem 0;
+        box-shadow: 5px 5px 10px rgba($primary, 0.3);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(50%);
+    }
+}
+@media screen and (max-width: 760px) {
+    .repair-types {
+        &__card {
+            margin-bottom: 5.642rem;
+        }
+    }
+    .card {
+        &__text {
+            margin-left: 0;
+        }
+    }
+}

@@ -5,6 +5,9 @@ html {
     font-size: 14px;
     font-family: "FuturaBook", sans-serif;
 }
+img {
+    max-width: 100%;
+}
 @media screen and (max-width: 1200px) {
     html {
         font-size: 12px;
