@@ -1,0 +1,9 @@
+.footer {
+    background-color: $dark;
+    padding: 3.428rem 0;
+}
+@media screen and (max-width: 570px) {
+    .footer {
+        display: none;
+    }
+}
