@@ -15,7 +15,10 @@ const html = () => {
 };
 
 const scripts = () => {
-    return src('src/js/main.js')
+    return src([
+        './node_modules/jquery/dist/jquery.js',
+        'src/js/*.js'
+    ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(dest('src/js'))

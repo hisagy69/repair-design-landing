@@ -21,6 +21,7 @@
     "sass": "^1.62.1"
   },
   "dependencies": {
+    "jquery": "^3.7.0",
     "reset-css": "^5.0.1"
   }
 }

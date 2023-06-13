@@ -1,22 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.querySelector('.modal');
-    const body = document.querySelector('body');
+$(function() {
+    //modal
+    const modal = $('.modal');
+    const body = $('body');
     const modalAdd = () => {
-        modal.classList.add('modal_visible');
-        body.classList.add('scroll-hide');
+        modal.addClass('modal_visible');
+        body.addClass('scroll-hide');
         document.addEventListener('keydown', keyRemoveHandler);
     };
     const modalRemove = () => {
-        modal.classList.remove('modal_visible');
-        body.classList.remove('scroll-hide');
-        document.removeEventListener('keydown', keyRemoveHandler);
+        modal.removeClass('modal_visible');
+        body.removeClass('scroll-hide');
+        $(document).on('keydown', keyRemoveHandler);
     };
     const keyRemoveHandler = (e) => {
         if (e.key === 'Escape') {
             modalRemove();
         }
     };
-    document.addEventListener('click', (e) => {
+    $(document).on('click', (e) => {
         if (e.target.matches('[data-toggle="modal"]')) {
             modalAdd();
             return;
