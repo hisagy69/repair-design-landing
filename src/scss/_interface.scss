@@ -84,22 +84,16 @@
         }
     }
 }
-.input-group {
-    &__label {
-        font-family: "FuturaBook";
-        color: rgba($white, 0.5);
-        font-size: 1.071rem;
-    }
-    &__input {
-        width: 100%;
-        font-family: "FuturaMedium";
-        font-size: 1.285rem;
-        color: $white;
-        background-color: transparent;
-        border: none;
+.input {
+    font-family: "FuturaMedium";
+    font-size: 1.285rem;
+    border: none;
+    padding: 0.642rem 0;
+    transition: background-color 0.3s;
+    &_dark {
         border-bottom: 1px solid rgba($white, 0.15);
-        padding: 0.642rem 0;
-        transition: background-color 0.3s;
+        background-color: transparent;
+        color: $white;
         &::placeholder {
             color: $white;
         }
@@ -108,26 +102,26 @@
         }
     }
 }
-.checkbox-group {
-    &__input {
-        position: absolute;
-        left: -9999px;
+.label {
+    font-size: 1.071rem;
+    &_light {
+        color: rgba($white, 0.5);
+    }
+}
+.policy {
+    &__checkbox {
+        display: none;
         &:checked + label::before {
-            content: url("../img/checkbox.svg");
-            background-color: $primary;
+            content: "";
+            background: url("../img/checkbox.svg") $primary no-repeat center;
             border: 1px solid $primary;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
     }
     &__label {
-        font-family: 'FuturaBook';
         font-size: 1.142rem;
-        color: $white;
         position: relative;
         display: inline-block;
-        padding-left: 24px;
+        padding-left: 1.714rem;
         vertical-align: middle;
         &::before {
             content: "";

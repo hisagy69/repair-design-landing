@@ -22,7 +22,7 @@
                 </nav>
                 <div class="contacts menu__contacts">
                     <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-                    <button class="button contacts__button button_primary">Заказать звонок</button>
+                    <button class="button contacts__button button_primary" data-toggle="modal">Заказать звонок</button>
                 </div>
             </div>
             <!-- /.menu -->
@@ -309,21 +309,15 @@
                 Оставьте заявку и наш менеджер свяжется с вами 
             </p>
             <form class="modal__form">
-                <div class="input-group modal__input-group">
-                    <label for="name" class="input-group__label">Имя</label>
-                    <input id="name" type="text" class="input-group__input" placeholder="Как вас зовут:">
-                </div>
-                <div class="input-group modal__input-group">
-                    <label for="phone" class="input-group__label">Телефон</label>
-                    <input id="phone" type="text" class="input-group__input" placeholder="Ваш номер телефона:">
-                </div>
-                <div class="input-group">
-                    <label for="email" class="input-group__label">Email</label>
-                    <input id="email" type="text" class="input-group__input" placeholder="Ваш email">
-                </div>
-                <div class="checkbox-group modal__checkbox-group">
-                    <input id="agree" type="checkbox" class="checkbox-group__input">
-                    <label for="agree" class="checkbox-group__label">Я соглашаюсь с обработкой данных</label>
+                <label for="name" class="label modal__label label_light">Имя</label>
+                <input id="name" type="text" class="input modal__input input_dark" placeholder="Как вас зовут:">
+                <label for="phone" class="label modal__label label_light">Телефон</label>
+                <input id="phone" type="tel" class="input modal__input input_dark" placeholder="Ваш номер телефона:">
+                <label for="email" class="label modal__label label_light">Email</label>
+                <input id="email" type="email" class="input modal__input input_dark" placeholder="Ваш email">
+                <div class="policy modal__policy">
+                    <input id="agree" type="checkbox" class="checkbox policy__checkbox" checked>
+                    <label for="agree" class="policy__label">Я соглашаюсь с обработкой данных</label>
                 </div>
                 <button class="button modal__button button_primary">Отправить заявку</button>
             </form>
@@ -331,6 +325,6 @@
         </div>
     </div>
     <!-- /.modal -->
-    <script src="js/main.min.jss"></script>
+    <script src="./js/main.min.js"></script>
 </body>
 </html>

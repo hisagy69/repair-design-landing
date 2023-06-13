@@ -39,7 +39,7 @@ const img = () => {
 
 const watching = () => {
     watch(['src/scss/**/*.scss'], styles).on('change', browserSync.reload);
-    watch(['src/js/*.js'], scripts).on('change', browserSync.reload);
+    watch(['src/js/*.js', '!src/js/*.min.js'], scripts).on('change', browserSync.reload);
     watch(['src/*.html']).on('change', browserSync.reload);
 };
 
