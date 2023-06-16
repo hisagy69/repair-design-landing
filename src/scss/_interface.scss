@@ -137,6 +137,20 @@
         }
     }
 }
+.scroll-top {
+    display: none;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    border: 2px solid $primary;
+    background: $dark url("../img/arrow-top.svg") no-repeat center / 9px;
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+    &_visible {
+        display: block;
+    }
+}
 @media screen and (max-width: 1200px) {
     .nav {
         &__link {

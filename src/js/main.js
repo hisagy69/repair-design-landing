@@ -26,4 +26,26 @@ $(function() {
             modalRemove();
         }
     });
+    // scroll-top
+    $('body').append('<a href="#" class="scroll-top"></a>');
+    const scrollTop = $('.scroll-top');
+    $(document).on('scroll', () => {
+        if ($(window).scrollTop() > $('.hero').height()) {
+            scrollTop.addClass('scroll-top_visible');
+        } else {
+            scrollTop.removeClass('scroll-top_visible');
+        }
+    });
+    // scroll-to
+    $(document).on('click', (e) => {
+        e.preventDefault();
+        if (e.target.matches('.scroll-top') || e.target.matches('.scroll-down')) {
+            const href = $(e.target).attr('href');
+            if (href === '#') {
+                $('html,body').animate({scrollTop: 0},500);
+                return;
+            }
+            $('html,body').animate({scrollTop: $(href).offset().top}, 500);
+        }
+    });
 });
