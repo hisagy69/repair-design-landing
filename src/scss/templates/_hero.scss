@@ -90,6 +90,7 @@
     display: flex;
     align-items: center;
     padding: 2.428rem 6.428rem 2.428rem 3.428rem;
+    z-index: 1;
     &::after {
         content: url(../../img/button-down.svg);
         margin-left: 0.857rem;

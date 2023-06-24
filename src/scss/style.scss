@@ -1,12 +1,15 @@
 @import "../../node_modules/reset-css/reset";
+@import "../../node_modules/swiper/swiper-bundle";
 @import "fonts";
 @import "settings";
 @import "grid";
 @import "variables";
 @import "interface";
 @import "./templates/section";
+@import "./templates/slider";
 @import "./templates/header";
 @import "./templates/hero";
+@import "./templates/projects";
 @import "./templates/types";
 @import "./templates/design";
 @import "./templates/footer";

@@ -6,6 +6,21 @@
             font-family: "YesevaOne";
             text-align: center;
             margin-bottom: 0.714rem;
+            line-height: 1.37;
+            &_primary {
+                color: $primary;
+            }
+        }
+        &__word {
+            display: flex;
+            align-items: center;
+            &::after {
+                content: "";
+                width: 91px;
+                height: 2px;
+                background-color: $primary;
+                margin-left: 2rem;
+            }
         }
         &__image {
             display: flex;
@@ -21,6 +36,16 @@
                 margin: 0 8px;
             }
         }
+        &__text {
+            max-width: 31.571rem;
+            color: $white;
+            font-family: 'FuturaBookC';
+            font-size: 1.285rem;
+            line-height: 1.61;
+        }
+        &_left {
+            text-align-last: left;
+        }
     }
     &__description {
         font-family: "FuturaBook";
@@ -28,5 +53,24 @@
         color: $gray;
         text-align: center;
         line-height: 1.358;
+    }
+    &_dark {
+        background-color: $dark;
+    }
+}
+@media screen and (max-width: 760px){
+    .section {
+        &-title {
+            &__heading {
+                margin-bottom: 1.833rem;
+            }
+            &__text {
+                font-size: 1.166rem;
+                margin-bottom: 2.571rem;
+            }
+        }
+        &_dark {
+            color: $light-black;
+        }
     }
 }

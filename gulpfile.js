@@ -17,6 +17,7 @@ const html = () => {
 const scripts = () => {
     return src([
         './node_modules/jquery/dist/jquery.js',
+        './node_modules/swiper/swiper-bundle.js',
         'src/js/*.js'
     ])
         .pipe(concat('main.min.js'))

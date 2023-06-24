@@ -48,4 +48,17 @@ $(function() {
             $('html,body').animate({scrollTop: $(href).offset().top}, 500);
         }
     });
+    //slider
+    const swiper = new Swiper('.projects__swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets'
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        allowTouchMove: false
+    });
 });
