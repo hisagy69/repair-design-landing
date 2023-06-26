@@ -43,6 +43,11 @@
             font-size: 1.285rem;
             line-height: 1.61;
         }
+        &__subtitle {
+            font-size: 1.074rem;
+            color: $white;
+            margin-bottom: 1.285rem;
+        }
         &_left {
             text-align-last: left;
         }
