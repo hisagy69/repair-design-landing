@@ -49,7 +49,20 @@ $(function() {
         }
     });
     //slider
-    const swiper = new Swiper('.projects__swiper', {
+    const projectsSwiper = new Swiper('.projects__swiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets'
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        allowTouchMove: false
+    });
+
+    const workingSwiper = new Swiper('.working-methods__swiper', {
         loop: true,
         pagination: {
             el: '.swiper-pagination',

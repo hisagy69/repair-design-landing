@@ -9,8 +9,6 @@
         align-items: center;
         margin-top: 5.785rem;
     }
-}
-.swiper {
     &-slide {
         &-row {
             display: flex;
@@ -18,6 +16,35 @@
         }
         &__text {
             flex-basis: 50%;
+            margin-bottom: 2.833rem;
+        }
+        &__progress-number {
+            color: $white;
+            font-size: 1.285rem;
+            margin-bottom: 1.571rem;
+        }
+        &__heading {
+            font-family: 'YesevaOne';
+            font-size: 1.285rem;
+            line-height: 1.388;
+            text-transform: uppercase;
+            color: $primary;
+            margin-bottom: 0.642rem;
+            &_sm {
+                font-size: 1.071rem;
+                max-width: 18.714rem;
+            }
+        }
+        &__description {
+            color: $white;
+            font-size: 1.071rem;
+            line-height: 1.698;
+        }
+        &__value {
+            color: $white;
+            font-family: 'FuturaBookC';
+            font-size: 1.071rem;
+            line-height: 1.333;
         }
     }
     &-button {
@@ -50,6 +77,42 @@
             &-active {
                 --swiper-pagination-color: #fff;
             }
+        }
+    }
+    &-navigation {
+        &__card {
+            font-size: 1.071rem;
+            color: rgba($white, 0.3);
+            cursor: pointer;
+            &_active {
+                color: $white;
+                &::after {
+                    display: none;
+                }
+                & .swiper-navigation__number {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &__number {
+            width: fit-content;
+            margin-bottom: 1.214rem;
+            font-family: "YesevaOne";
+            &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: $primary;
+                opacity: 0.3;
+                display: block;
+            }
+        }
+        &__text {
+            max-width: 9.4rem;
+            font-size: 1.071rem;
+            margin-bottom: 2.571rem;
         }
     }
 }

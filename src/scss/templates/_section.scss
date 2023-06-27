@@ -60,7 +60,7 @@
         line-height: 1.358;
     }
     &_dark {
-        background-color: $dark;
+        background: url("../../img/bg-lines-lg.svg") $dark no-repeat center / cover;
     }
 }
 @media screen and (max-width: 760px){

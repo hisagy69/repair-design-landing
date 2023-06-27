@@ -1,7 +1,4 @@
 .projects {
-    background-image: url("../../img/projects_lines.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 12.571rem 0 29.714rem;
     position: relative;
     &::before {
@@ -18,25 +15,6 @@
     }
     &__section-title {
         margin-bottom: 3rem;
-    }
-}
-.swiper-slide {
-    &__text {
-        margin-bottom: 2.833rem;
-    }
-    &__heading {
-        font-family: 'YesevaOne';
-        font-size: 1.285rem;
-        line-height: 1.388;
-        text-transform: uppercase;
-        color: $primary;
-        margin-bottom: 0.642rem;
-    }
-    &__value {
-        color: $white;
-        font-family: 'FuturaBookC';
-        font-size: 1.071rem;
-        line-height: 1.333;
     }
 }
 @media screen and (max-width: 760px) {
