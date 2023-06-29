@@ -74,4 +74,27 @@ $(function() {
         },
         allowTouchMove: false
     });
+    // swiper change
+    workingSwiper[0].on('activeIndexChange', (swiper) => {
+        const activeNavigation = $(`.swiper-navigation__card[data-navigation-number="${swiper.realIndex}"]`);
+        if (!activeNavigation.hasClass('wiper-navigation__card_active')) {
+            $('.swiper-navigation__card_active').removeClass('swiper-navigation__card_active');
+            activeNavigation.addClass('swiper-navigation__card_active');
+        }
+    });
+    // slide index
+    $('.swiper-slide__progress-number').text((index) => {
+        return `${index + 1}/${workingSwiper[0].slides.length}`;
+    });
+    // navigation slider
+    $(`.swiper-navigation__card[data-navigation-number="${workingSwiper[0].realIndex}"]`).addClass('swiper-navigation__card_active');
+    $(document).on('click', (e) => {
+        const swiperNavigationCard = e.target.closest('.swiper-navigation__card');
+        if (swiperNavigationCard && !$(swiperNavigationCard).hasClass('swiper-navigation__card_active')) {
+            const navigationNumber =  $(swiperNavigationCard).data('navigationNumber');
+            workingSwiper.forEach((swiper) => {
+                swiper.slideToLoop(navigationNumber, 300);
+            });
+        }
+    });
 });
