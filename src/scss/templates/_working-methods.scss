@@ -8,3 +8,25 @@
         margin-top: 6.214rem;
     }
 }
+@media screen and (max-width: 1360px) {
+    .working-methods {
+        &__text {
+            max-width: 26.071rem;
+        }
+        &__image {
+            max-width: 47rem;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .working-methods {
+        &__image {
+            max-width: 44rem;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .working-methods {
+        display: none;
+    }
+}
