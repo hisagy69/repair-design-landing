@@ -27,7 +27,7 @@ $(function() {
         }
     });
     // scroll-top
-    $('body').append('<a href="#" class="scroll-top"></a>');
+    $('body:first').append('<a href="#" class="scroll-top"></a>');
     const scrollTop = $('.scroll-top');
     $(document).on('scroll', () => {
         if ($(window).scrollTop() > $('.hero').height()) {
