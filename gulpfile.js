@@ -18,7 +18,8 @@ const scripts = () => {
     return src([
         './node_modules/jquery/dist/jquery.js',
         './node_modules/swiper/swiper-bundle.js',
-        'src/js/*.js'
+        'src/js/*.js',
+        '!src/js/*.min.js'
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
