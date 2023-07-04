@@ -160,13 +160,37 @@
         <!-- /.projects -->
         <section class="section control">
             <div class="container">
-                <div class="section-title">
-                    <h2 class="section-title__heading">онлайн контроль</h2>
+                <div class="section-title control__title">
+                    <h2 class="section-title__heading section-title__heading_white">онлайн контроль</h2>
                     <div class="section-title__image">
                         <img src="./img/control.svg" alt="control">
                     </div>
                 </div>
                 <!-- /.section-title -->
+                <div class="video control__video">
+                    <button class="video__button"></button>
+                </div>
+                <!-- /.control__video -->
+                <p class="section__text control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
+                <!-- /.section__text control__text -->
+                <form class="control__form">
+                    <div class="input-group control__input-group">
+                        <label for="name" class="label control__label label_gray">Имя</label>
+                        <input id="name" type="text" class="input control__input input_light" placeholder="Как вас зовут:">
+                    </div>
+                    <!-- /.input-group -->
+                    <div class="input-group control__input-group">
+                        <label for="phone" class="label control__label label_gray">Телефон</label>
+                        <input id="phone" type="tel" class="input control__input input_light" placeholder="Ваш номер телефона:">
+                    </div>
+                    <!-- /.input-group -->                    
+                    <button class="button control__button button_primary">Отправить</button>
+                    <div class="policy control__policy">
+                        <input id="agree" type="checkbox" class="checkbox policy__checkbox" checked>
+                        <label for="agree" class="policy__label">Я соглашаюсь с обработкой данных</label>
+                    </div>
+                </form>
+                <!-- /.control__form -->
             </div>
         </section>
         <!-- /.section.control -->

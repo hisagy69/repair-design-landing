@@ -1,0 +1,85 @@
+.control {
+    position: relative;
+    padding-bottom: 10.142rem;
+    margin-top: -23.142rem;
+    &__title {
+        margin-bottom: 2.214rem;
+    }
+    &__video {
+        margin: 0 auto 4.464rem;
+    }
+    &__text {
+        max-width: 28rem;
+        text-align: center;
+        line-height: 1.698;
+        margin: 0 auto 4.285rem;
+        &::before {
+            content: "";
+            width: 55px;
+            height: 2px;
+            background-color: $primary;
+            display: block;
+            margin: 0 auto 2.5rem;
+        }
+    }
+    &__form {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    &__input-group {
+        &:first-child {
+            margin-right: 4.142em;
+        }
+    }
+    &__input {
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+    &__button {
+        vertical-align: bottom;
+        padding: 1.285rem 4.214rem;
+        margin-left: 3.5rem;
+    }
+    &__policy {
+        margin-top: 2.5rem;
+        text-align: center;
+    }
+}
+.video {
+    width: 58.357rem;
+    max-width: 100%;
+    height: 31rem;
+    background: url("../../img/control.jpg") no-repeat center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba($dark, 0.8);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &__button {
+        width: 6.071rem;
+        height: 6.071rem;
+        border-radius: 50%;
+        background-color: $primary;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        &::before {
+            content: "";
+            border: 1rem solid transparent;
+            border-right: none;
+            border-left: 2rem solid $white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

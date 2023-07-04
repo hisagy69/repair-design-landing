@@ -90,6 +90,11 @@
     border: none;
     padding: 0.642rem 0;
     transition: background-color 0.3s;
+    &-group {
+        width: 16.357rem;
+        display: inline-flex;
+        flex-direction: column;
+    }
     &_dark {
         border-bottom: 1px solid rgba($white, 0.15);
         background-color: transparent;
@@ -101,9 +106,16 @@
             background-color: rgba($white, 0.1);
         }
     }
+    &_light {
+        border-bottom: 1px solid rgba($dark, 0.3);
+        color: $gray;
+    }
 }
 .label {
     font-size: 1.071rem;
+    &_gray {
+        color: rgba($gray, 0.50);
+    }
     &_light {
         color: rgba($white, 0.5);
     }
