@@ -90,11 +90,6 @@
     border: none;
     padding: 0.642rem 0;
     transition: background-color 0.3s;
-    &-group {
-        width: 16.357rem;
-        display: inline-flex;
-        flex-direction: column;
-    }
     &_dark {
         border-bottom: 1px solid rgba($white, 0.15);
         background-color: transparent;
@@ -109,6 +104,12 @@
     &_light {
         border-bottom: 1px solid rgba($dark, 0.3);
         color: $gray;
+        &::placeholder {
+            color: $gray;
+        }
+        &:focus {
+            background-color: rgba($gray, 0.1);
+        }
     }
 }
 .label {
@@ -135,12 +136,13 @@
         display: inline-block;
         padding-left: 1.714rem;
         vertical-align: middle;
+        cursor: pointer;
         &::before {
             content: "";
             width: 1.142rem;
             height: 1.142rem;
             border-radius: 1px;
-            border: 1px solid $white;
+            border: 1px solid $primary;
             position: absolute;
             left: 0;
             top: 50%;

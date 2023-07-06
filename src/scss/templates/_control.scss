@@ -18,29 +18,34 @@
             width: 55px;
             height: 2px;
             background-color: $primary;
+            border-radius: 30px;
             display: block;
             margin: 0 auto 2.5rem;
         }
     }
     &__form {
-        width: fit-content;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 55rem;
+        justify-content: space-between;
         margin: 0 auto;
     }
     &__input-group {
-        &:first-child {
-            margin-right: 4.142em;
-        }
+        display: flex;
+        flex-direction: column;
     }
     &__input {
-        width: 100%;
+        width: 16.5rem;
+        max-width: 100%;
         padding: 0.5rem 0;
     }
     &__button {
         vertical-align: bottom;
-        padding: 1.285rem 4.214rem;
+        padding: 1.2857rem 4.785rem;
         margin-left: 3.5rem;
     }
     &__policy {
+        flex-basis: 100%;
         margin-top: 2.5rem;
         text-align: center;
     }
