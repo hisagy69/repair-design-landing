@@ -38,8 +38,8 @@ $(function() {
     });
     // scroll-to
     $(document).on('click', (e) => {
-        e.preventDefault();
         if (e.target.matches('.scroll-top') || e.target.matches('.scroll-down')) {
+            e.preventDefault();
             const href = $(e.target).attr('href');
             if (href === '#') {
                 $('html,body').animate({scrollTop: 0},500);
