@@ -61,6 +61,7 @@
         color: $gray;
         text-align: center;
         line-height: 1.358;
+        margin: 0 auto;
     }
     &_dark {
         background: url("../../img/bg-lines-lg.svg") $dark no-repeat center / cover;
