@@ -26,6 +26,10 @@
         font-size: 1.571rem;
         color: $white;
         margin-bottom: 2.928rem;
+        --animate-delay: 0.3s;
+    }
+    &__buttons {
+        --animate-delay: 0.3s;
     }
     &__button {
         padding: 1.143rem 1.714rem;

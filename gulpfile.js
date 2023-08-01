@@ -18,6 +18,7 @@ const scripts = () => {
     return src([
         './node_modules/jquery/dist/jquery.js',
         './node_modules/swiper/swiper-bundle.js',
+        './node_modules/wow.js/dist/wow.js',
         'src/js/*.js',
         '!src/js/*.min.js'
     ])

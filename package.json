@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.29.3",
     "browsersync": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
@@ -21,8 +22,10 @@
     "sass": "^1.62.1"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "jquery": "^3.7.0",
     "reset-css": "^5.0.1",
-    "swiper": "^9.4.1"
+    "swiper": "^9.4.1",
+    "wow.js": "^1.2.2"
   }
 }
