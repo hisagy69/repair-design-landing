@@ -5,17 +5,17 @@
     background-color: rgba($black, 0.3);
     color: $white;
     font-family: "FuturaBook";
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 3;
+    z-index: -1;
     left: 0;
     top: 0;
     transition: opacity 0.3s;
     &_visible {
+        z-index: 3;
         opacity: 1;
-        display: flex;
     }
     &__dialog {
         background: url("../../img/bg-lines-sm.svg") $light-black no-repeat center;
