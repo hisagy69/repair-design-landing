@@ -1,6 +1,46 @@
 .footer {
     background-color: $dark;
     padding: 3.428rem 0;
+    &__form {
+        max-width: 36.928rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__form-text {
+        font-family: "YesevaOne";
+        color: $white;
+        font-size: 1.428rem;
+        text-align: center;
+        margin-bottom: 3.271rem;
+    }
+    &__input-group {
+        width: 16.5rem;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+        &_full {
+            width: 100%;
+        }
+    }
+    &__policy {
+        width: 100%;
+        text-align: center;
+        margin: -3px 0 3.571rem;
+    }
+    &__button {
+        font-size: 1.071rem;
+        padding: 1.428rem 3.857rem;
+        margin: 0 auto;
+    }
+}
+.form-wrap {
+    background: url("../../img/bg-lines-footer.svg") $light-black no-repeat center;
+    max-width: 63.428rem;
+    padding: 2.428rem 13rem;
+    margin: 0 auto;
 }
 @media screen and (max-width: 570px) {
     .footer {

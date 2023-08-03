@@ -548,17 +548,37 @@
             <!-- /.section.container -->
         </section>
         <!-- /.clients -->
-        <section class="contacts">
-            <div class="container">
-
-            </div>
-            <!-- /.container -->
-        </section>
-        <!-- /.contacts -->
     </main>
     <!-- /.main -->
-    <footer class="footer">
+    <footer class="footer section">
         <div class="container">
+            <div class="form-wrap">
+                <p class="footer__form-text">Остались вопросы?</p>
+                <form class="footer__form">
+                    <div class="footer__input-group">
+                        <label for="footer-name" class="label footer__label label_light">Имя</label>
+                        <input id="footer-name" type="text" class="input footer__input input_dark" placeholder="Как вас зовут:">
+                    </div>
+                    <!-- /.footer__input-group -->
+                    <div class="footer__input-group">
+                        <label for="footer-phone" class="label footer__label label_light">Телефон</label>
+                        <input id="footer-phone" type="tel" class="input footer__input input_dark" placeholder="Ваш номер телефона:">
+                    </div>
+                    <!-- /.footer__input-group -->
+                    <div class="footer__input-group footer__input-group_full">
+                        <label for="footer-question" class="label footer__label label_light">Вопрос</label>
+                        <input id="footer-question" type="text" class="input footer__input input_dark" placeholder="Я хочу спросить:">
+                    </div>
+                    <!-- /.footer__input-group -->
+                    <div class="policy footer__policy">
+                        <input id="footer-agree" type="checkbox" class="checkbox policy__checkbox" checked>
+                        <label for="footer-agree" class="policy__label policy__label_light">Я соглашаюсь с обработкой данных</label>
+                    </div>
+                    <button class="button footer__button button_primary">Отправить</button>
+                </form>
+                <!-- /.footer__form -->
+            </div>
+            <!-- /.form-wrap -->
             <div class="menu">
                 <div class="logo menu__logo">Repair Design Project</div>
                 <nav class="nav menu__nav">

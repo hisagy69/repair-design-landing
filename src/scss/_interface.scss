@@ -149,6 +149,9 @@
             transform: translateY(-50%);
             transition: background-color 0.3s;
         }
+        &_light {
+            color: $white;
+        }
     }
 }
 .scroll-top {
