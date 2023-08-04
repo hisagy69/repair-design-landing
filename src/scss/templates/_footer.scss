@@ -1,19 +1,34 @@
 .footer {
-    background-color: $dark;
-    padding: 3.428rem 0;
+    background: $dark url(../../img/footer-bg.jpg) no-repeat center/cover;
+    position: relative;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(180deg, rgba($light-black, 0.9) 3.47%, rgba($light-black, 0.72) 100%);
+    }
+    &__content {
+        position: relative;
+    }
     &__form {
         max-width: 36.928rem;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+        &-wrap {
+            margin: 0 auto 3.714rem;
+        }
     }
-    &__form-text {
+    &__title {
         font-family: "YesevaOne";
         color: $white;
         font-size: 1.428rem;
         text-align: center;
-        margin-bottom: 3.271rem;
+        margin-bottom: 3.285rem;
     }
     &__input-group {
         width: 16.5rem;
@@ -35,15 +50,56 @@
         padding: 1.428rem 3.857rem;
         margin: 0 auto;
     }
+    &__text {
+        max-width: 42rem;
+        color: $primary;
+        font-family: "YesevaOne";
+        font-size: 1.428rem;
+        line-height: 1.386;
+        text-align: center;
+        margin: 0 auto 1.857rem;
+    }
+    &__link {
+        width: 28px;
+        height: 28px;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 50%;
+        &s {
+            text-align: center;
+            margin-bottom: 3.092rem;
+        }
+        &_mail {
+            background: $primary url(../../img/email.svg) no-repeat center;
+        }
+        &_instagram {
+            background: $primary url(../../img/instagram.svg) no-repeat center;
+        }
+        &:first-child {
+            margin-right: 1.071rem;
+        }
+    }
+    &__map {
+        margin: 0 auto 4.709rem;
+    }
+    &__menu {
+        background-color: $dark;
+        padding: 3.428rem 0;
+    }
 }
 .form-wrap {
     background: url("../../img/bg-lines-footer.svg") $light-black no-repeat center;
     max-width: 63.428rem;
     padding: 2.428rem 13rem;
-    margin: 0 auto;
+}
+.map {
+    width: 66.071rem;
+    max-width: 100%;
+    height: 33.214rem;
+    background: url(../../img/map.jpg) no-repeat center/cover;
 }
 @media screen and (max-width: 570px) {
-    .footer {
+    .footer__menu {
         display: none;
     }
 }
