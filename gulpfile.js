@@ -19,6 +19,7 @@ const scripts = () => {
         './node_modules/jquery/dist/jquery.js',
         './node_modules/swiper/swiper-bundle.js',
         './node_modules/wow.js/dist/wow.js',
+        './node_modules/jquery-validation/dist/jquery.validate.js',
         'src/js/*.js',
         '!src/js/*.min.js'
     ])

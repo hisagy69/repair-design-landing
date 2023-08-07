@@ -121,6 +121,12 @@
         color: rgba($white, 0.5);
     }
 }
+input.invalid {
+    border-color: tomato;
+}
+label.invalid {
+    color: tomato;
+}
 .policy {
     &__checkbox {
         display: none;

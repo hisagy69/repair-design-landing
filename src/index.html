@@ -176,17 +176,17 @@
                 <form class="control__form animate__animated animate__fadeIn wow">
                     <div class="control__input-group">
                         <label for="control-name" class="label control__label label_gray">Имя</label>
-                        <input id="control-name" type="text" class="input control__input input_light" placeholder="Как вас зовут:">
+                        <input id="control-name" type="text" name="userName" class="input control__input input_light" placeholder="Как вас зовут:">
                     </div>
                     <!-- /.control__input-group -->
                     <div class="control__input-group">
                         <label for="control-phone" class="label control__label label_gray">Телефон</label>
-                        <input id="control-phone" type="tel" class="input control__input input_light" placeholder="Ваш номер телефона:">
+                        <input id="control-phone" type="tel" name="userPhone" class="input control__input input_light" placeholder="Ваш номер телефона:">
                     </div>
                     <!-- /.control__input-group -->                
                     <button class="button control__button button_primary">Отправить</button>
                     <div class="policy control__policy">
-                        <input id="control-agree" type="checkbox" class="checkbox policy__checkbox" checked>
+                        <input id="control-agree" type="checkbox" name="userPolicy" class="checkbox policy__checkbox" checked>
                         <label for="control-agree" class="policy__label">Я соглашаюсь с обработкой данных</label>
                     </div>
                 </form>
@@ -558,21 +558,21 @@
                     <form class="footer__form">
                         <div class="footer__input-group">
                             <label for="footer-name" class="label footer__label label_light">Имя</label>
-                            <input id="footer-name" type="text" class="input footer__input input_dark" placeholder="Как вас зовут:">
+                            <input id="footer-name" type="text" name="userName" class="input footer__input input_dark" placeholder="Как вас зовут:">
                         </div>
                         <!-- /.footer__input-group -->
                         <div class="footer__input-group">
                             <label for="footer-phone" class="label footer__label label_light">Телефон</label>
-                            <input id="footer-phone" type="tel" class="input footer__input input_dark" placeholder="Ваш номер телефона:">
+                            <input id="footer-phone" type="tel" name="userPhone" class="input footer__input input_dark" placeholder="Ваш номер телефона:">
                         </div>
                         <!-- /.footer__input-group -->
                         <div class="footer__input-group footer__input-group_full">
                             <label for="footer-question" class="label footer__label label_light">Вопрос</label>
-                            <input id="footer-question" type="text" class="input footer__input input_dark" placeholder="Я хочу спросить:">
+                            <input id="footer-question" type="text" name="userQuestion" class="input footer__input input_dark" placeholder="Я хочу спросить:">
                         </div>
                         <!-- /.footer__input-group -->
                         <div class="policy footer__policy">
-                            <input id="footer-agree" type="checkbox" class="checkbox policy__checkbox" checked>
+                            <input id="footer-agree" type="checkbox" name="userPolicy" class="checkbox policy__checkbox" checked>
                             <label for="footer-agree" class="policy__label policy__label_light">Я соглашаюсь с обработкой данных</label>
                         </div>
                         <button class="button footer__button button_primary">Отправить</button>
@@ -624,14 +624,23 @@
                 Оставьте заявку и наш менеджер свяжется с вами 
             </p>
             <form class="modal__form">
-                <label for="modal-name" class="label modal__label label_light">Имя</label>
-                <input id="modal-name" type="text" class="input modal__input input_dark" placeholder="Как вас зовут:">
-                <label for="modal-phone" class="label modal__label label_light">Телефон</label>
-                <input id="modal-phone" type="tel" class="input modal__input input_dark" placeholder="Ваш номер телефона:">
-                <label for="modal-email" class="label modal__label label_light">Email</label>
-                <input id="modal-email" type="email" class="input modal__input input_dark" placeholder="Ваш email">
+                <div class="modal__input-group">
+                    <label for="modal-name" class="label modal__label label_light">Имя</label>
+                    <input id="modal-name" type="text" name="userName" class="input modal__input input_dark" placeholder="Как вас зовут:">
+                </div>
+                <!-- /.modal__input-group -->
+                <div class="modal__input-group">
+                    <label for="modal-phone" class="label modal__label label_light">Телефон</label>
+                    <input id="modal-phone" type="tel" name="userPhone" class="input modal__input input_dark" placeholder="Ваш номер телефона:">
+                </div>
+                <!-- /.modal__input-group -->
+                <div class="modal__input-group">
+                    <label for="modal-email" class="label modal__label label_light">Email</label>
+                    <input id="modal-email" type="email" name="userEmail" class="input modal__input input_dark" placeholder="Ваш email">
+                </div>
+                <!-- /.modal__input-group -->
                 <div class="policy modal__policy">
-                    <input id="modal-agree" type="checkbox" class="checkbox policy__checkbox" checked>
+                    <input id="modal-agree" type="checkbox" name="userPolicy" class="checkbox policy__checkbox" checked>
                     <label for="modal-agree" class="policy__label">Я соглашаюсь с обработкой данных</label>
                 </div>
                 <button class="button modal__button button_primary">Отправить заявку</button>
