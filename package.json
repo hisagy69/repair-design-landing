@@ -24,6 +24,7 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "jquery": "^3.7.0",
+    "jquery-mask-plugin": "^1.14.16",
     "jquery-validation": "^1.19.5",
     "reset-css": "^5.0.1",
     "swiper": "^9.4.1",
