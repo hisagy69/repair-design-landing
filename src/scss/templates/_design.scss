@@ -21,9 +21,14 @@
         }
     }
 }
+@media screen and (max-width: 992px) {
+    .design-project {
+        margin-bottom: 0;
+    }
+}
 @media screen and (max-width: 760px) {
     .design-project {
-        background-color: $dark-gray;
+        background-color: $light-black;
         &__heading, &__description {
             color: $white;
         }

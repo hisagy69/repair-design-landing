@@ -9,13 +9,13 @@
         position: relative;
         max-width: 19.428rem;
         &-text {
-            max-width: 16.642rem;
+            width: 85.586%;
             box-shadow: 0px 10px 15px 0px rgba($black, 0.5);
             padding: 1.571rem 0 0;
         }
     }
     &__text {
-        max-width: 40.571rem;
+        width: 40.571rem;
         font-family: "FuturaBook";
         font-size: 1.428rem;
         line-height: 1.698;
@@ -42,6 +42,7 @@
         position: absolute;
         left: -35px;
         top: -35px;
+        box-shadow: 0px 5px 20px 0px rgba($primary, 0.5);
     }
     &__name {
         font-size: 1.285rem;
@@ -66,5 +67,35 @@
         font-size: 0.928rem;
         text-align: center;
         padding: 1.642rem 0;
+    }
+}
+@media screen and (max-width: 992px) {
+    .command {
+        margin-top: 0;
+        &__card {
+            max-width: 15rem;
+        }
+    }
+}
+@media screen and (max-width: 760px) {
+    .command {
+        background-color: $light-black;
+        &__description {
+            font-size: 1.071rem;
+        }
+        &__card {
+            width: 100%;
+            max-width: none;
+            transform: translateX(17px);
+            &:not(:last-child) {
+                margin-bottom: 6.357rem;
+            }
+            &-text {
+                margin-left: auto;
+            }
+        }
+        &__text {
+            display: none;
+        }
     }
 }

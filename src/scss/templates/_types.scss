@@ -7,6 +7,9 @@
 .card {
     &__image {
         overflow: hidden;
+        & img {
+            width: 100%;
+        }
     }
     &__text {
         max-width: 23.571rem;
