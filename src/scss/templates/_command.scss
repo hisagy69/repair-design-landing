@@ -1,0 +1,70 @@
+.command {
+    padding-bottom: 6.347rem;
+    margin-top: -30.125rem;
+    &__description {
+        max-width: 32rem;
+        margin: 1.642rem auto 5.285rem;
+    }
+    &__card {
+        position: relative;
+        max-width: 19.428rem;
+        &-text {
+            max-width: 16.642rem;
+            box-shadow: 0px 10px 15px 0px rgba($black, 0.5);
+            padding: 1.571rem 0 0;
+        }
+    }
+    &__text {
+        max-width: 40.571rem;
+        font-family: "FuturaBook";
+        font-size: 1.428rem;
+        line-height: 1.698;
+        text-align: center;
+        margin: 3.785rem auto 0;
+        &::before {
+            content: "";
+            width: 55px;
+            height: 1px;
+            display: block;
+            background-color: $primary;
+            margin: 0 auto 1.214rem;
+        }
+    }
+}
+.card {
+    &__icon {
+        width: 70px;
+        height: 70px;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: -35px;
+        top: -35px;
+    }
+    &__name {
+        font-size: 1.285rem;
+        color: $light-black;
+        font-family: "YesevaOne";
+        text-align: center;
+        margin-bottom: 0.642rem;
+    }
+    &__role {
+        font-size: 1.285rem;
+        text-align: center;
+        font-family: "FuturaBook";
+        color: $light-gray;
+        margin-bottom: 1.714rem;
+    }
+    &__experience {
+        width: 100%;
+        background-color: $primary;
+        font-family: "YesevaOne";
+        color: $white;
+        text-transform: uppercase;
+        font-size: 0.928rem;
+        text-align: center;
+        padding: 1.642rem 0;
+    }
+}
