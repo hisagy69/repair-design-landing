@@ -53,7 +53,7 @@
 .video {
     max-width: 58.357rem;
     min-height: 31rem;
-    background: $dark url("../../img/control.jpg") no-repeat center;
+    background: $dark url("../../img/control.jpg") no-repeat center/cover;
     box-shadow: (0px 20px 50px rgba($black, 0.15));
     position: relative;
     display: flex;
@@ -85,6 +85,66 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+        }
+    }
+}
+@media screen and (max-width: 760px) {
+    .control {
+        background-color: $light-black;
+        padding-bottom: 0;
+        margin-top: 0;
+        &__video {
+            min-height: 17.25rem;
+            margin-bottom: 2.333rem;
+        }
+        &__text {
+            font-size: 1.166rem;
+            color: $white;
+            margin-bottom: 2.166rem;
+            &::before {
+                margin-bottom: 1.75rem;
+            }
+        }
+        &__form {
+            flex-direction: column;
+        }
+        &__label {
+            color: rgba($white, 0.5);
+        }
+        &__input-group {
+            margin-bottom: 5.25rem;
+        }
+        &__input {
+            width: 100%;
+            border-bottom: 1px solid rgba($gray, 0.3);
+            background-color: transparent;
+            color: $white;
+            &::placeholder {
+                color: $white;
+            }
+        }
+        &__button {
+            margin-left: 0;
+            order: 1;
+            transform: translateY(50%);
+        }
+        &__policy {
+            color: $white;
+            font-size: 1.333rem;
+            margin-top: -3.083rem;
+            margin-bottom: 2.083rem;
+        }
+    }
+    .video {
+        box-shadow: none;
+        &__play {
+            width: 3.083rem;
+            height: 3.083rem;
+            &::before {
+                border: 0.5rem solid rgba(0,0,0,0);
+                border-right: none;
+                border-left: 1rem solid #fff;
+            }
         }
     }
 }
