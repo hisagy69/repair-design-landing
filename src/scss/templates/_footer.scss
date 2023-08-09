@@ -1,6 +1,7 @@
 .footer {
     background: $dark url(../../img/footer-bg.jpg) no-repeat center/cover;
     position: relative;
+    padding-top: 1px;
     &::before {
         content: "";
         width: 100%;
