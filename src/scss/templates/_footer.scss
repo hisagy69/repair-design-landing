@@ -99,6 +99,68 @@
     height: 33.214rem;
     background: url(../../img/map.jpg) no-repeat center/cover;
 }
+@media screen and (max-width: 992px) {
+    .footer {
+        padding: 0;
+        &__form {
+            flex-direction: column;
+            max-width: 100%;
+        }
+        &__input-group {
+            width: 100%;
+        }
+    }
+    .form-wrap {
+        max-width: none;
+        width: 100%;
+        padding: 2.428rem 2rem;
+    }
+}
+@media screen and (max-width: 760px) {
+    .footer {
+        background: $light-black;
+        &__form-wrap {
+            margin: 0 auto 3.833rem;
+        }
+        &__title {
+            font-size: 1.666rem;
+            margin-bottom: 4.333rem;
+        }
+        &__label {
+            font-size: 1.25rem;
+        }
+        &__input-group {
+            margin-bottom: 5.25rem;
+        }
+        &__policy {
+            margin-top: -0.467rem;
+            text-align: left;
+        }
+        &__button {
+            font-size: 1.25rem;
+            padding: 1.583rem 0;
+            width: 100%;
+        }
+        &__text {
+            order: 1;
+        }
+        &__links {
+            order: 2;
+            margin-bottom: 3.166rem;
+        }
+        &__map {
+            margin: 0 auto 3.482rem;
+        }
+    }
+    .form-wrap {
+        padding: 0;
+        background: none;
+    }
+    .map {
+        width: 100%;
+        height: 21.25rem;
+    }
+}
 @media screen and (max-width: 570px) {
     .footer__menu {
         display: none;

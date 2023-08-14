@@ -1,3 +1,8 @@
 .clients {
     padding-bottom: 26rem;
 }
+@media screen and (max-width: 760px) {
+    .clients {
+        display: none;
+    }
+}
