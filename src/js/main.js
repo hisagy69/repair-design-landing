@@ -112,6 +112,7 @@ $(function() {
                     required: true,
                     email: true
                 },
+                userQuestion: 'required',
                 userPhone: 'required'
             },
             messages: {
@@ -124,6 +125,7 @@ $(function() {
                     required: 'Укажите адрес электронной почты',
                     email: 'Адрес электронной почты должен быть в формате name@domain.com'
                 },
+                userQuestion: 'Заполните поле',
                 userPhone: 'Введите номер телефона'
             },
             errorClass: "invalid"
