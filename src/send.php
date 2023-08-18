@@ -10,6 +10,10 @@
     $userPhone = $_POST['userPhone'];
     $userEmail = $_POST['userEmail'];
     $userQuestion = $_POST['userQuestion'];
+    $nameMessage = $userName ? "<p>Имя пользователя: ${userName}</p>": "";
+    $phoneMessage = $userPhone ? "<p>Телефон пользователя: ${userPhone}</p>": "";
+    $emailMessage = $userEmail ? "<p>Email пользователя: ${userEmail}</p>": "";
+    $questionMessage = $userQuestion ? "<p>Сообщение пользователя: ${userQuestion}</p>": "";
     
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
@@ -33,11 +37,7 @@
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Новая заявка с сайта';
-        $mail->Body    = "<p>Имя пользователя: ${userName}</p>
-        <p>Телефон пользователя: ${userPhone}</p>
-        <p>Email пользователя: ${userEmail}</p>
-        <p>Сообщение пользователя: ${userQuestion}</p>";
-    
+        $mail->Body    = $nameMessage . $phoneMessage . $emailMessage . $questionMessage;
         if ($mail->send()) {
             echo "ok";
           } else {
