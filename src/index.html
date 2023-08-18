@@ -174,7 +174,7 @@
                 <!-- /.control__video -->
                 <p class="section__text control__text animate__animated animate__fadeInDown wow">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
                 <!-- /.section__text control__text -->
-                <form class="control__form animate__animated animate__fadeIn wow">
+                <form class="control__form animate__animated animate__fadeIn wow" method="POST" action="send.php">
                     <div class="control__input-group">
                         <label for="control-name" class="label control__label label_gray">Имя</label>
                         <input id="control-name" type="text" name="userName" class="input control__input input_light" placeholder="Как вас зовут:">
@@ -647,7 +647,7 @@
                 <div class="column">
                     <div class="form-wrap footer__form-wrap">
                         <h3 class="footer__title">Остались вопросы?</h3>
-                        <form class="footer__form">
+                        <form class="footer__form" method="POST" action="send.php">
                             <div class="footer__input-group">
                                 <label for="footer-name" class="label footer__label label_light">Имя</label>
                                 <input id="footer-name" type="text" name="userName" class="input footer__input input_dark" placeholder="Как вас зовут:">
@@ -716,7 +716,7 @@
             <p class="modal__text">
                 Оставьте заявку и наш менеджер свяжется с вами 
             </p>
-            <form class="modal__form">
+            <form class="modal__form" method="POST" action="send.php">
                 <div class="modal__input-group">
                     <label for="modal-name" class="label modal__label label_light">Имя</label>
                     <input id="modal-name" type="text" name="userName" class="input modal__input input_dark" placeholder="Как вас зовут:">
