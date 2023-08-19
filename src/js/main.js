@@ -8,9 +8,11 @@ $(function() {
         document.addEventListener('keydown', keyRemoveHandler);
     };
     const modalRemove = () => {
-        modal.removeClass('modal_visible');
-        body.removeClass('scroll-hide');
-        $(document).on('keydown', keyRemoveHandler);
+        if (modal.hasClass('modal_visible')) {
+            modal.removeClass('modal_visible');
+            body.removeClass('scroll-hide');
+            $(document).on('keydown', keyRemoveHandler);
+        }
     };
     const keyRemoveHandler = (e) => {
         if (e.key === 'Escape') {
@@ -128,7 +130,21 @@ $(function() {
                 userQuestion: 'Заполните поле',
                 userPhone: 'Введите номер телефона'
             },
-            errorClass: "invalid"
+            errorClass: "invalid",
+            submitHandler: (form) => {
+                $.ajax({
+                    type: 'POST',
+                    url: 'send.php',
+                    data: $(form).serialize(),
+                    success: (response) => {
+                        form.reset();
+                        modalRemove();
+                    },
+                    error: (response) => {
+                        console.error('Ошибка запроса', response);
+                    }
+                });
+            }
         });
     });
     // маска телефона
