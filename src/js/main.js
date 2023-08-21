@@ -1,31 +1,35 @@
 $(function() {
     //modal
-    const modal = $('.modal');
     const body = $('body');
-    const modalAdd = () => {
-        modal.addClass('modal_visible');
+    const modalAdd = (modalClass) => {
+        const modal = $(`.${modalClass}`);
+        modal.addClass(`${modalClass}_visible`);
         body.addClass('scroll-hide');
-        document.addEventListener('keydown', keyRemoveHandler);
+        body.on('keydown', getKeyRemoveHandler(modalClass));
     };
-    const modalRemove = () => {
-        if (modal.hasClass('modal_visible')) {
-            modal.removeClass('modal_visible');
+    const modalRemove = (modalClass) => {
+        const modal = $(`.${modalClass}`);
+        if (modal.hasClass(`${modalClass}_visible`)) {
+            modal.removeClass(`${modalClass}_visible`);
             body.removeClass('scroll-hide');
-            $(document).on('keydown', keyRemoveHandler);
+            body.on('keydown', getKeyRemoveHandler(modalClass));
+            body.off('keydown');
         }
     };
-    const keyRemoveHandler = (e) => {
-        if (e.key === 'Escape') {
-            modalRemove();
+    const getKeyRemoveHandler = (modalClass) => {
+        return (e) => {
+            if (e.key === 'Escape') {
+                modalRemove(modalClass);
+            }
         }
     };
     $(document).on('click', (e) => {
         if (e.target.matches('[data-toggle="modal"]')) {
-            modalAdd();
+            modalAdd('modal');
             return;
         }
         if (e.target.matches('.modal__close') || e.target.matches('.modal')) {
-            modalRemove();
+            modalRemove('modal');
         }
     });
     // scroll-top
@@ -101,6 +105,16 @@ $(function() {
     });
     // animation
     new WOW().init();
+    // модальное окно при завершении отправки
+    const modalInfoAdd = (response) => {
+        $('.modal-info__text').text(response === 'ok' ? 'Форма отправлена' : 'При отправке произошла ошибка, повторите отправку, пожалуйста позже');
+        modalAdd('modal-info');
+        $(document).on('click', (e) => {
+            if (e.target.matches('.modal-info__close') || e.target.matches('.modal-info')) {
+                modalRemove('modal-info');
+            }
+        });
+    }
     // валидация форм
     $('form').each((inex, item) => {
         $(item).validate({
@@ -138,9 +152,12 @@ $(function() {
                     data: $(form).serialize(),
                     success: (response) => {
                         form.reset();
-                        modalRemove();
+                        modalRemove('modal');
+                        modalInfoAdd(response);
                     },
                     error: (response) => {
+                        modalRemove('modal');
+                        modalInfoAdd(response);
                         console.error('Ошибка запроса', response);
                     }
                 });
