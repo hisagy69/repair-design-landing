@@ -7,6 +7,10 @@ const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 const webp = require('gulp-webp');
+const map = require('gulp-sourcemaps');
+const cleanCSS = require('gulp-clean-css');
+const babel = require('gulp-babel');
+const  replace  =  require ( 'gulp-replace' ) ; 
 
 const html = () => {
     return src('src/index.html')
@@ -16,26 +20,35 @@ const html = () => {
 
 const scripts = () => {
     return src([
+        // './node_modules/wow.js/dist/wow.min.js',
         './node_modules/jquery/dist/jquery.js',
         './node_modules/swiper/swiper-bundle.js',
-        './node_modules/wow.js/dist/wow.js',
         './node_modules/jquery-validation/dist/jquery.validate.js',
         './node_modules/jquery-mask-plugin/dist/jquery.mask.js',
         'src/js/*.js',
         '!src/js/*.min.js'
     ])
-        .pipe(concat('main.min.js'))
+        .pipe(map.init())
         .pipe(uglify())
+        .pipe(babel({
+			presets: ['@babel/env']
+		}))
+        .pipe(concat('main.min.js'))
+        .pipe(map.write('../sourcemaps'))
         .pipe(dest('src/js'))
         .pipe(browserSync.stream());
 };
 
 const styles = () => {
     return src('src/scss/style.scss')
-        .pipe(concat('style.min.css'))
+        .pipe(map.init())
         .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(replace(/url\(\"\.\.\/\.\.\//g, 'url("../'))
         .pipe(autoprefixer())
+        .pipe(cleanCSS())
+        .pipe(concat('style.min.css'))
         .pipe(dest('src/css'))
+        .pipe(map.write('../sourcemaps/'))
         .pipe(browserSync.stream());
 };
 
@@ -60,7 +73,7 @@ const serve = () => {
 };
 
 const cleanDist = () => {
-    return src('dist')
+    return src('?dist')
         .pipe(clean());
 };
 

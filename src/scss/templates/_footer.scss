@@ -1,5 +1,5 @@
 .footer {
-    background: $dark url(../../img/footer-bg.jpg) no-repeat center/cover;
+    background: $dark url("../../img/footer-bg.webp") no-repeat center/cover;
     position: relative;
     padding-top: 1px;
     &::before {
@@ -71,10 +71,10 @@
             margin-bottom: 3.092rem;
         }
         &_mail {
-            background: $primary url(../../img/email.svg) no-repeat center;
+            background: $primary url("../../img/email.svg") no-repeat center;
         }
         &_instagram {
-            background: $primary url(../../img/instagram.svg) no-repeat center;
+            background: $primary url("../../img/instagram.svg") no-repeat center;
         }
         &:first-child {
             margin-right: 1.071rem;
@@ -97,7 +97,7 @@
     width: 66.071rem;
     max-width: 100%;
     height: 33.214rem;
-    background: url(../../img/map.jpg) no-repeat center/cover;
+    background: url("../../img/map.webp") no-repeat center/cover;
 }
 @media screen and (max-width: 992px) {
     .footer {

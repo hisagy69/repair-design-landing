@@ -9,14 +9,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
     "browser-sync": "^2.29.3",
     "browsersync": "^0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-replace": "^1.1.4",
     "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
     "sass": "^1.62.1"
@@ -28,6 +34,6 @@
     "jquery-validation": "^1.19.5",
     "reset-css": "^5.0.1",
     "swiper": "^9.4.1",
-    "wow.js": "^1.2.2"
+    "wow.js": "1.2.2"
   }
 }

@@ -61,7 +61,7 @@
         display: flex;
         align-items: center;
         &::before {
-            content: url(../../img/area.svg);
+            content: url("../../img/area.svg");
         }
         & sup {
             font-size: 0.6rem;
@@ -71,7 +71,7 @@
         display: flex;
         align-items: center;
         &::before {
-            content: url(../../img/days.svg);
+            content: url("../../img/days.svg");
         }
     }
 }
