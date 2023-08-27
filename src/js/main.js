@@ -1,5 +1,6 @@
 import $ from "jquery";
 import Swiper from 'swiper';
+import {Navigation, Pagination} from 'swiper';
 import 'jquery-validation';
 import 'jquery-mask-plugin';
 import 'wow.js';
@@ -62,6 +63,7 @@ $(function() {
     });
     //slider
     const projectsSwiper = new Swiper('.projects__swiper', {
+        modules: [Navigation, Pagination],
         loop: true,
         pagination: {
             el: '.swiper-pagination',
@@ -75,6 +77,7 @@ $(function() {
     });
 
     const workingSwiper = new Swiper('.working-methods__swiper', {
+        modules: [Navigation, Pagination],
         loop: true,
         pagination: {
             el: '.swiper-pagination',
