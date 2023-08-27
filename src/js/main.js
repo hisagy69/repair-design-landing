@@ -1,3 +1,9 @@
+import $ from "jquery";
+import Swiper from 'swiper';
+import 'jquery-validation';
+import 'jquery-mask-plugin';
+import 'wow.js';
+
 $(function() {
     //modal
     const body = $('body');

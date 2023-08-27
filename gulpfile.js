@@ -9,8 +9,14 @@ const clean = require('gulp-clean');
 const webp = require('gulp-webp');
 const map = require('gulp-sourcemaps');
 const cleanCSS = require('gulp-clean-css');
-const babel = require('gulp-babel');
-const  replace  =  require ( 'gulp-replace' ) ; 
+const replace  =  require ( 'gulp-replace' ) ; 
+const rollup = require('@rollup/stream');
+const babel = require('@rollup/plugin-babel');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const commonjs = require('@rollup/plugin-commonjs');
+const nodeResolve = require('@rollup/plugin-node-resolve');
+let cache;
 
 const html = () => {
     return src('src/index.html')
@@ -19,24 +25,24 @@ const html = () => {
 };
 
 const scripts = () => {
-    return src([
-        // './node_modules/wow.js/dist/wow.min.js',
-        './node_modules/jquery/dist/jquery.js',
-        './node_modules/swiper/swiper-bundle.js',
-        './node_modules/jquery-validation/dist/jquery.validate.js',
-        './node_modules/jquery-mask-plugin/dist/jquery.mask.js',
-        'src/js/*.js',
-        '!src/js/*.min.js'
-    ])
-        .pipe(map.init())
-        .pipe(uglify())
-        .pipe(babel({
-			presets: ['@babel/env']
-		}))
-        .pipe(concat('main.min.js'))
-        .pipe(map.write('../sourcemaps'))
-        .pipe(dest('src/js'))
-        .pipe(browserSync.stream());
+    return rollup({
+        input: './src/js/main.js',
+        plugins: [babel(), commonjs(), nodeResolve()],
+        cache: cache,
+        output: {
+            format: 'iife',
+            sourcemap: true
+        }
+    }).on('bundle', (bundle) => {
+        cache = bundle;
+    })
+    .pipe(source('main.min.js'))
+    .pipe(buffer())
+    .pipe(map.init())
+    .pipe(uglify())
+    .pipe(map.write('../sourcemaps'))
+    .pipe(dest('./src/js'))
+    .pipe(browserSync.stream());
 };
 
 const styles = () => {
