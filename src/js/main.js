@@ -175,6 +175,22 @@ $(function() {
     });
     // маска телефона
     $('[type="tel"').mask('+7-000-000-0000');
+    // youtube плеер
+    const onYouTubeIframeAPIReady = () => {
+        new YT.Player('video', {
+            videoId: 'JpTvYzbDBZA',
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    };
+    const onPlayerReady = (event) => {
+        event.target.playVideo();
+    };
+    $('.video__play').on('click', (e) => {
+        $(e.target).hide()
+        onYouTubeIframeAPIReady();
+    });
     // карта
     const init = () => {
         var myMap = new ymaps.Map("map", {

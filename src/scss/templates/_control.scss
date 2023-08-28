@@ -51,19 +51,27 @@
     }
 }
 .video {
-    max-width: 58.357rem;
+    width: 58.357rem;
+    max-width: 100%;
     min-height: 31rem;
     background: $dark url("../../img/control.webp") no-repeat center/cover;
     box-shadow: (0px 20px 50px rgba($black, 0.15));
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     &::before {
         content: "";
         width: 100%;
         height: 100%;
         background-color: rgba($dark, 0.8);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    &__player {
+        width: 100%;
+        height: 100%;
         position: absolute;
         left: 0;
         top: 0;
