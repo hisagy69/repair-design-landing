@@ -19,7 +19,7 @@ const nodeResolve = require('@rollup/plugin-node-resolve');
 let cache;
 
 const html = () => {
-    return src('src/index.html')
+    return src('src/**.html')
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(dest('dist'));
 };
@@ -85,6 +85,8 @@ const cleanDist = () => {
 
 const building = () => {
     return src([
+        'src/phpmailer/**/**',
+        'src/**.php',
         'src/css/style.min.css',
         'src/js/main.min.js',
         'src/font/**',
