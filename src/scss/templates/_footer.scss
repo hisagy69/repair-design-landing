@@ -21,6 +21,8 @@
         align-items: center;
         justify-content: space-between;
         &-wrap {
+            max-width: 63.428rem;
+            padding: 2.428rem 13rem;
             margin: -15rem auto 3.714rem;
         }
     }
@@ -90,8 +92,6 @@
 }
 .form-wrap {
     background: url("../../img/bg-lines-footer.svg") $light-black no-repeat center;
-    max-width: 63.428rem;
-    padding: 2.428rem 13rem;
 }
 .map {
     width: 66.071rem;

@@ -1,0 +1,86 @@
+.leave-contact {
+    &__form-wrap {
+        max-width: 36.357rem;
+        padding: 2rem 3.5rem 1.928rem;
+    }
+    &__title {
+        font-family: "FuturaDemi";
+        font-size: 1.428rem;
+        line-height: 1.25;
+        text-align: center;
+        color: $white;
+        margin-bottom: 2.785rem;
+    }
+    &__input-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.428rem;
+    }
+    &__policy {
+        color: $white;
+        margin: -2.286rem 0 2.785rem;
+    }
+    &__button {
+        padding: 1.357rem 1.5rem;
+    }
+    &__saving {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2.714rem;
+    }
+}
+.information {
+    background: url("../../img/house.svg") no-repeat 41% 739%,url("../../img/circle.svg") no-repeat 165% 151%;
+    min-height: 45.571em;
+    position: relative;
+    &__list {
+        counter-reset: counterList;
+    }
+    &__item {
+        font-family: "FuturaMedium";
+        font-size: 1.285rem;
+        font-weight: 500;
+        line-height: 1.166;
+        display: flex;
+        align-items: center;
+        &::before {
+            counter-increment: counterList;
+            content: "0" counter(counterList);
+            font-family: "YesevaOne";
+            font-size: 1.285rem;
+            color: $white;
+            background-color: $primary;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            margin-right: 1.217rem;
+        }
+    }
+    &__text {
+        max-width: 25rem;
+    }
+}
+.saving {
+    display: flex;
+    align-items: center;
+    &__icon {
+        width: 72px;
+        height: 72px;
+        background-color: $primary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.785rem;
+    }
+    &__text {
+        font-family: "FuturaDemi";
+        font-size: 1.428rem;
+        line-height: 1.25;
+        color: $primary;
+        max-width: 22.714rem;
+    }
+}
