@@ -1,7 +1,9 @@
 .leave-contact {
+    background: url("../../img/house.svg") no-repeat -3% -43%,url("../../img/circle.svg") no-repeat -2.5% 11%;
     &__form-wrap {
-        max-width: 36.357rem;
-        padding: 2rem 3.5rem 1.928rem;
+        width: 36.15rem;
+        max-width: 100%;
+        padding: 1.8rem 3.5rem 1.928rem;
     }
     &__title {
         font-family: "FuturaDemi";
@@ -11,17 +13,22 @@
         color: $white;
         margin-bottom: 2.785rem;
     }
-    &__input-group {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 3.428rem;
+    &__input {
+        padding: 0.4rem 0;
+        &-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3.56rem;
+        }
     }
     &__policy {
         color: $white;
-        margin: -2.286rem 0 2.785rem;
+        margin: -2.1rem 0 2.785rem;
     }
     &__button {
-        padding: 1.357rem 1.5rem;
+        display: block;
+        margin: 0 0 0 auto;
+        padding: 1.22rem 2.6rem;
     }
     &__saving {
         display: flex;
@@ -30,8 +37,8 @@
     }
 }
 .information {
-    background: url("../../img/house.svg") no-repeat 41% 739%,url("../../img/circle.svg") no-repeat 165% 151%;
     min-height: 45.571em;
+    flex-grow: 1;
     position: relative;
     &__list {
         counter-reset: counterList;
@@ -43,6 +50,23 @@
         line-height: 1.166;
         display: flex;
         align-items: center;
+        position: absolute;
+        &:first-child {
+            left: 227px;
+            top: 72px;
+        }
+        &:nth-child(2) {
+            left: 301px;
+            top: 183px;
+        }
+        &:nth-child(3) {
+            left: 325px;
+            top: 349px;
+        }
+        &:nth-child(4) {
+            left: 258px;
+            top: 506px;
+        }
         &::before {
             counter-increment: counterList;
             content: "0" counter(counterList);

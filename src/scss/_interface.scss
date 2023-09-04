@@ -128,6 +128,8 @@ label.invalid {
     color: tomato;
 }
 .policy {
+    display: flex;
+    align-items: center;
     &__checkbox {
         display: none;
         &:checked + label::before {
@@ -140,13 +142,13 @@ label.invalid {
         font-size: 1.142rem;
         position: relative;
         display: inline-block;
-        padding-left: 1.714rem;
+        padding-left: 1.87rem;
         vertical-align: middle;
         cursor: pointer;
         &::before {
             content: "";
-            width: 1.142rem;
-            height: 1.142rem;
+            width: 1.3rem;
+            height: 1.3rem;
             border-radius: 1px;
             border: 1px solid $primary;
             position: absolute;
