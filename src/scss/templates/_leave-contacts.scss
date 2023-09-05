@@ -1,5 +1,5 @@
 .leave-contact {
-    background: url("../../img/house.svg") no-repeat -3% -43%,url("../../img/circle.svg") no-repeat -2.5% 11%;
+    background: url("../../img/house.svg") no-repeat -3% -43%;
     &__form-wrap {
         width: 36.15rem;
         max-width: 100%;
@@ -33,13 +33,18 @@
     &__saving {
         display: flex;
         justify-content: flex-end;
-        margin-top: 2.714rem;
+        margin-top: -2.714rem;
+        margin-right: 4rem;
     }
 }
 .information {
-    min-height: 45.571em;
+    background: url("../../img/circle.svg") no-repeat;
+    height: 45.571rem;
+    width: 45.571rem;
     flex-grow: 1;
     position: relative;
+    margin-left: -10.7%;
+    margin-top: 16px;
     &__list {
         counter-reset: counterList;
     }
@@ -52,20 +57,20 @@
         align-items: center;
         position: absolute;
         &:first-child {
-            left: 227px;
-            top: 72px;
+            left: 357px;
+            top: 63px;
         }
         &:nth-child(2) {
-            left: 301px;
-            top: 183px;
+            left: 431px;
+            top: 174px;
         }
         &:nth-child(3) {
-            left: 325px;
-            top: 349px;
+            left: 454px;
+            top: 339px;
         }
         &:nth-child(4) {
-            left: 258px;
-            top: 506px;
+            left: 389px;
+            top: 497px;
         }
         &::before {
             counter-increment: counterList;
@@ -106,5 +111,10 @@
         line-height: 1.25;
         color: $primary;
         max-width: 22.714rem;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .leave-contact {
+        display: none;
     }
 }
