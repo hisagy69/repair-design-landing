@@ -1,4 +1,5 @@
 .logo {
+    text-transform: uppercase;
     font-size: 1rem;
     color: $primary;
     font-family: "FuturaDemi";
@@ -34,7 +35,7 @@
         margin-right: 3.214rem;
     }
     &__button {
-        padding: 0.928rem 1.428rem;
+        padding: 0.7rem 1.428rem;
     }
 }
 .phone {

@@ -2,12 +2,13 @@
     &-title {
         &__heading {
             text-transform: uppercase;
-            font-size: 1.428rem;
+            font-size: 1.43rem;
             font-family: "YesevaOne";
             text-align: center;
-            margin-bottom: 0.714rem;
-            line-height: 1.37;
+            line-height: 1.49;
+            margin-bottom: 0.75rem;
             &_primary {
+                font-size: 1.76rem;
                 color: $primary;
             }
             &_white {
@@ -22,7 +23,7 @@
                 width: 91px;
                 height: 2px;
                 background-color: $primary;
-                margin-left: 2rem;
+                margin-left: 2.4rem;
             }
         }
         &__image {
@@ -42,7 +43,7 @@
         &__text {
             max-width: 31.571rem;
             color: $white;
-            font-family: 'FuturaBookC';
+            font-family: 'FuturaBook';
             font-size: 1.285rem;
             line-height: 1.61;
         }

@@ -7,7 +7,7 @@
     &__buttons {
         display: flex;
         align-items: center;
-        margin-top: 5.785rem;
+        margin-top: 3.785rem;
     }
     &-slide {
         &-row {
@@ -16,7 +16,7 @@
         }
         &__text {
             flex-basis: 50%;
-            margin-bottom: 2.833rem;
+            margin-bottom: 2.46rem;
         }
         &__progress-number {
             color: $white;
@@ -29,7 +29,7 @@
             line-height: 1.388;
             text-transform: uppercase;
             color: $primary;
-            margin-bottom: 0.642rem;
+            margin-bottom: 0.5rem;
             &_sm {
                 font-size: 1.071rem;
                 max-width: 18.714rem;
@@ -42,7 +42,7 @@
         }
         &__value {
             color: $white;
-            font-family: 'FuturaBookC';
+            font-family: 'FuturaBook';
             font-size: 1.071rem;
             line-height: 1.333;
         }
@@ -54,13 +54,13 @@
             position: static;
         }
         &-prev {
-            margin-right: 30px;
+            margin-right: 20px;
             &::after {
                 content: url("../../img/arrow-left.svg");
             }
         }
         &-next {
-            margin-left: 30px;
+            margin-left: 20px;
             &::after {
                 content: url("../../img/arrow-right.svg");
             }
