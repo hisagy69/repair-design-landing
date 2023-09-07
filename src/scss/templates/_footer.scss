@@ -29,18 +29,22 @@
     &__title {
         font-family: "YesevaOne";
         color: $white;
+        text-transform: uppercase;
         font-size: 1.428rem;
         text-align: center;
-        margin-bottom: 3.285rem;
+        margin-bottom: 3.8rem;
     }
-    &__input-group {
-        width: 16.5rem;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 3.5rem;
-        &_full {
-            width: 100%;
+    &__input {
+        padding-top: 0;
+        &-group {
+            width: 16.5rem;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3.5rem;
+            &_full {
+                width: 100%;
+            }
         }
     }
     &__policy {
@@ -50,13 +54,14 @@
     }
     &__button {
         font-size: 1.071rem;
-        padding: 1.428rem 3.857rem;
+        padding: 1.15rem 4.2rem;
         margin: 0 auto;
     }
     &__text {
-        max-width: 42rem;
+        max-width: 39rem;
         color: $primary;
         font-family: "YesevaOne";
+        text-transform: uppercase;
         font-size: 1.428rem;
         line-height: 1.386;
         text-align: center;

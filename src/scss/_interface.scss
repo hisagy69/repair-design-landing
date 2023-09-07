@@ -131,6 +131,7 @@ label.invalid {
 .policy {
     display: flex;
     align-items: center;
+    justify-content: center;
     &__checkbox {
         display: none;
         &:checked + label::before {

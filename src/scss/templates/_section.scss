@@ -8,7 +8,6 @@
             line-height: 1.49;
             margin-bottom: 0.75rem;
             &_primary {
-                font-size: 1.76rem;
                 color: $primary;
             }
             &_white {
@@ -48,6 +47,8 @@
             line-height: 1.61;
         }
         &__subtitle {
+            font-family: "FuturaDemi";
+            text-transform: uppercase;
             font-size: 1.074rem;
             color: $white;
             margin-bottom: 1.285rem;
@@ -69,6 +70,9 @@
     }
     &_dark {
         background: url("../../img/bg-lines-lg.svg") $dark no-repeat center / cover;
+    }
+    &_white {
+        background: url("../../img/bg-line-white.svg") $white no-repeat center/cover;
     }
 }
 @media screen and (max-width: 760px){

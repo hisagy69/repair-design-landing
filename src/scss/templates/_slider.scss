@@ -7,7 +7,7 @@
     &__buttons {
         display: flex;
         align-items: center;
-        margin-top: 3.785rem;
+        margin-top: 4.7rem;
     }
     &-slide {
         &-row {
@@ -20,8 +20,9 @@
         }
         &__progress-number {
             color: $white;
+            font-family: "YesevaOne";
             font-size: 1.285rem;
-            margin-bottom: 1.571rem;
+            margin-bottom: 1.7rem;
         }
         &__heading {
             font-family: 'YesevaOne';
@@ -29,7 +30,7 @@
             line-height: 1.388;
             text-transform: uppercase;
             color: $primary;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.9rem;
             &_sm {
                 font-size: 1.071rem;
                 max-width: 18.714rem;
@@ -39,6 +40,9 @@
             color: $white;
             font-size: 1.071rem;
             line-height: 1.698;
+        }
+        &__paragraph {
+            margin-bottom: 0.7rem;
         }
         &__value {
             color: $white;
@@ -98,8 +102,9 @@
         }
         &__number {
             width: fit-content;
-            margin-bottom: 1.214rem;
+            line-height: 1.3;
             font-family: "YesevaOne";
+            margin-bottom: 0.8rem;
             &::after {
                 content: "";
                 width: 100%;
@@ -110,9 +115,10 @@
             }
         }
         &__text {
-            max-width: 9.4rem;
+            max-width: 8.7rem;
             font-size: 1.071rem;
-            margin-bottom: 2.571rem;
+            line-height: 1.2;
+            margin-bottom: 2.95rem;
         }
     }
 }

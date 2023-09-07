@@ -1,5 +1,12 @@
 .working-methods {
     padding: 30.571rem 0 35.785rem;
+    &__heading {
+        font-size: 1.92rem;
+        line-height: 1.4;
+    }
+    &__subtitle {
+        margin-bottom: 1.1rem;
+    }
     &__text {
         max-width: 24.071rem;
     }
