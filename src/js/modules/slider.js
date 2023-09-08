@@ -35,7 +35,11 @@ const addSwiperNavigationCardHandler = (slider) => {
 };
 
 const sliderInit = () => {
-    const projectsSwiper = new Swiper('.projects__swiper', {
+    const repairStylesSwiper = new Swiper('repair-styles__swiper', {
+        allowTouchMove: false
+    });
+    
+    const workingSwiper = new Swiper('.working-methods__swiper', {
         modules: [Navigation, Pagination],
         loop: true,
         pagination: {
@@ -48,8 +52,8 @@ const sliderInit = () => {
         },
         allowTouchMove: false
     });
-    
-    const workingSwiper = new Swiper('.working-methods__swiper', {
+
+    const projectsSwiper = new Swiper('.projects__swiper', {
         modules: [Navigation, Pagination],
         loop: true,
         pagination: {
