@@ -26,7 +26,7 @@ const html = () => {
 
 const scripts = () => {
     return rollup({
-        input: './src/js/main.js',
+        input: './src/js/index.js',
         plugins: [babel(), commonjs(), nodeResolve()],
         cache: cache,
         output: {
