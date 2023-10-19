@@ -59,7 +59,10 @@ const styles = () => {
 };
 
 const img = () => {
-    return src('src/img/*.{jpg,jpeg,png}')
+    return src([
+      'src/img/*.{jpg,jpeg,png}',
+      'src/img/**/*.{jpg,jpeg,png}'
+    ])
         .pipe(webp())
         .pipe(dest('src/img'));
 };

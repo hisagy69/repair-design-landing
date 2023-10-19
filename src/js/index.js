@@ -6,6 +6,7 @@ import animationAdd from './modules/animation';
 import addValidation from './modules/validation';
 import addMask from './modules/mask';
 import addVideoPlayHandler from './modules/youtube-player';
+import tabsInit from './modules/tabs';
 import addMap from './modules/map';
 
 $(() => {
@@ -16,5 +17,6 @@ $(() => {
     addValidation();
     addMask();
     addVideoPlayHandler();
+    tabsInit();
     addMap();
 });

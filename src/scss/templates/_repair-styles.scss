@@ -1,4 +1,84 @@
 .repair-styles {
-    background: $dark url("../../img/repair-styles-bg.jpg") no-repeat center/cover;
-    padding: 9.785rem 0 6.071rem;
+  background: $dark url("../../img/repair-styles-bg.jpg") no-repeat center/cover;
+  padding: 9.785rem 0 6.071rem;
+  &__text {
+    max-width: 29.357rem;
+  }
+  &__heading {
+    font-family: "YesevaOne";
+    font-size: 1.928rem;
+    text-transform: uppercase;
+    line-height: 1.37;
+    color: $primary;
+    margin-bottom: 2.7rem;
+  }
+  &__tab {
+    width: fit-content;
+    font-family: "FuturaBook";
+    color: $white;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    cursor: pointer;
+    transition: color 0.3s;
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      background-color: $primary;
+      transition: width 0.3s;
+    }
+    &:hover {
+      color: $primary;
+      &::after {
+        width: 100%;
+      }
+    }
+    &_active {
+      color: $primary;
+    }
+  }
+  &__images {
+    width: 53.642rem;
+    position: relative;
+  }
+  &__slide {
+    display: none;
+    &_active {
+      display: block;
+    }
+  }
+  &__image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    &:first-child {
+      margin-bottom: 2.642rem;
+    }
+  }
+}
+.slide-wrapper {
+  width: 49%;
+  &_left, &_right {
+    position: absolute;
+  }
+  &_left {
+    top: -12.68rem;
+    left: 0;
+    .repair-styles__image-wrapper:first-child {
+      height: 39.775rem;
+    }
+    .repair-styles__image-wrapper:last-child {
+      height: 24.928rem;
+    }
+  }
+  &_right {
+    top: -17.822rem;
+    right: 0;
+    .repair-styles__image-wrapper:first-child {
+      height: 19.642rem;
+    }
+    .repair-styles__image-wrapper:last-child {
+      height: 44.659rem;
+    }
+  }
 }
