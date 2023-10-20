@@ -14,10 +14,10 @@
   }
   &__tab {
     width: fit-content;
-    font-family: "FuturaBook";
+    font-family: "FuturaMedium";
     color: $white;
-    font-size: 1.7rem;
-    line-height: 1.7;
+    font-size: 1.66rem;
+    line-height: 2.1;
     cursor: pointer;
     transition: color 0.3s;
     &::after {
@@ -54,10 +54,14 @@
     &:first-child {
       margin-bottom: 2.642rem;
     }
+    img {
+      max-width: none;
+      height: 100%;
+    }
   }
 }
 .slide-wrapper {
-  width: 49%;
+  width: 47.4%;
   &_left, &_right {
     position: absolute;
   }
