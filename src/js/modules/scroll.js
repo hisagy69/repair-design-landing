@@ -15,7 +15,7 @@ const addScrollHandler = () => {
 };
 const addScrollToHandler = () => {
     $(document).on('click', (e) => {
-        if (e.target.matches('.scroll-top') || e.target.matches('.scroll-down')) {
+        if (e.target.matches('.scroll-top') || e.target.matches('.scroll-down') || e.target.matches('.nav__link')) {
             e.preventDefault();
             const href = $(e.target).attr('href');
             if (href === '#') {

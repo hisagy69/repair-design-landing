@@ -122,23 +122,35 @@
         }
     }
 }
+@media screen and (max-width: 760px) {
+  .hero {
+    &__content {
+      max-width: 100%;
+    }
+    &__button {
+      width: 100%;
+      &s {
+        flex-direction: column;
+      }
+    }
+  }
+}
 @media screen and (max-width: 570px) {
     .hero {
         &__title {
             margin-bottom: 1.142rem;
+            font-size: 1.92rem;
         }
         &__text {
-            font-size: 1.285rem;
+            font-size: 1.5rem;
             margin-bottom: 2.285rem;
         }
         &__button {
-            &:first-child {
-                margin-right: 0;
-                margin-bottom: 1.857rem;
-            }
+          padding: 1.4rem 0;
+          &:first-child {
+              margin-right: 0;
+              margin-bottom: 1.857rem;
+          }
         }
-    }
-    .title {
-        font-size: 1.642rem;
     }
 }

@@ -17,7 +17,6 @@ const tabShow = (activeIndex) => {
   $(`[data-slide-index="${activeIndex}"]`).addClass('repair-styles__slide_active');
 };
 const tabsInit = () => {
-  console.log('work')
   tabHabdler();
 };
 export default tabsInit;

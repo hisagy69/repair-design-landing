@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import {addModalHandler} from './modules/modal';
-import scrollInit from './modules/scroll-top';
+import scrollInit from './modules/scroll';
 import sliderInit from './modules/slider';
 import animationAdd from './modules/animation';
 import addValidation from './modules/validation';
