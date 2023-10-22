@@ -93,7 +93,8 @@ const building = () => {
         'src/css/style.min.css',
         'src/js/main.min.js',
         'src/font/**',
-        'src/img/*.{webp,svg}'
+        'src/img/*.{webp,svg}',
+        'src/img/**/*.{webp,svg}'
     ], {base: 'src'})
         .pipe(dest('dist'));
 }
